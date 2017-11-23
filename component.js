@@ -19,6 +19,9 @@ const BaseDropdownMenu = ('dropdown-menu',{
         selectOptionHandler: function ( event ) {
             /*this.visibleStatus = false*/
             this.$parent.$emit ( 'menuSelect', event.target.innerHTML.trim() )
+        },
+        exitImg: function () {
+            this.$parent.$emit ( 'exitimg')
         }
     },
     template:`
@@ -27,7 +30,7 @@ const BaseDropdownMenu = ('dropdown-menu',{
        <div class="option-menu" v-if = "visibleStatus" >
            <div class="option-menu-drop" @mouseenter="selectOptionHandler" 
                v-for="item in options"
-               :key="item" 
+               :key="item" @mouseleave = "exitImg"
             >
             {{item}}</div>
        </div>

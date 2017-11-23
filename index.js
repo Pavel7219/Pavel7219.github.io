@@ -18,7 +18,9 @@ var vm = new Vue({
 vm.$on ( 'menuSelect', function ( val ) {
     this.optionSelect = this.optionsText [ val ]
 })
-
+vm.$on ( 'exitimg', function ( ) {
+    this.optionSelect = "";
+})
 
 
 /*
