@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+   <script src="https://unpkg.com/vue"></script>
+    <script src="data.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <dropdown-menu :options="mainMenuOptions">
+    </dropdown-menu>
+     <!--<div v-html="optionSelect" ></div>-->
+    <show-img-items :src='optionSelect'>
+
+</div>
+<script src="component.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
